@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "no_damage_tilt",
+  "version": "${version}",
+  "name": "No_Damage_Tilt",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/no_damage_tilt/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "no_damage_tilt.client.No_damage_tiltDataGenerator"
+    ],
+    "client": [
+      "no_damage_tilt.client.No_damage_tiltClient"
+    ],
+    "main": [
+      "no_damage_tilt.No_damage_tilt"
+    ]
+  },
+  "mixins": [
+    "no_damage_tilt.mixins.json",
+    {
+      "config": "no_damage_tilt.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
